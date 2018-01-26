@@ -1,0 +1,58 @@
+{
+  "name": "find-lat-lng",
+  "version": "1.0.0",
+  "description": "Find latitude and longitude for a list of addresses",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "precommit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motleyagency/find-lat-lng.git"
+  },
+  "keywords": [
+    "googlemaps",
+    "maps",
+    "latitude",
+    "longitude",
+    "addresses",
+    "address"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "index.js"
+  ],
+  "author": "Pete Nykänen <pete.a.nykanen@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/motleyagency/find-lat-lng/issues"
+  },
+  "homepage": "https://github.com/motleyagency/find-lat-lng#readme",
+  "lint-staged": {
+    "*.js": [
+      "prettier --single-quote --trailing-comma all --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-motley": "^8.0.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.0",
+    "husky": "^0.14.3",
+    "jest": "^22.1.4",
+    "lint-staged": "^4.3.0",
+    "prettier": "^1.10.2"
+  },
+  "dependencies": {
+    "node-fetch": "^1.7.3",
+    "p-throttle": "^1.1.0"
+  }
+}
