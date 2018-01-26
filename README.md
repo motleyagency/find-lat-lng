@@ -21,18 +21,18 @@ const client = findLatLng(GOOGLE_API_KEY);
 const GOOGLE_API_KEY = 'your_google_api_key'; // (https://developers.google.com/maps/documentation/javascript/get-api-key)
 const items = ["Lönnrotinkatu 5, Helsinki", "Lönnrotinkatu 4, Helsinki"];
 
-const itemsWithLatLng = await client(items, { debug: false });
+(async () => {
+  const itemsWithLatLng = await client(items, { debug: false });
+  console.log(itemsWithLatLng);
 
-console.log(itemsWithLatLng);
-
-/*
-[
-  { address: 'Lonnrotinkatu 5', lat: 60.166924, lng: 24.939788},
-  { address: 'Lonnrotinkatu 4', lat: 60.167142, lng: 24.940959},
-  ...
-]
-*/
-
+  /*
+  [
+    { address: 'Lonnrotinkatu 5', lat: 60.166924, lng: 24.939788},
+    { address: 'Lonnrotinkatu 4', lat: 60.167142, lng: 24.940959},
+    ...
+  ]
+  */
+})();
 ```
 
 If lat and/or lng is not found `null` is returned
