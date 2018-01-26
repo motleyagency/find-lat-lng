@@ -27,11 +27,11 @@ const findLatLng = (apiKey, opts = { debug: false }) => async addresses => {
             console.warn(`Could not find lat/lng for ${x}`); // eslint-disable-line no-console
           }
 
-          return {
+          return resolve({
             address: x,
             lat: null,
             lng: null,
-          };
+          });
         }
 
         const { geometry: { location: { lat, lng } } } = results[0];
@@ -46,14 +46,7 @@ const findLatLng = (apiKey, opts = { debug: false }) => async addresses => {
     1000,
   );
 
-  const latLngs = await Promise.all(
-    Array.from(uniqueAddresses).map(throttledFetch),
-  );
-
-  return addresses.map(address => {
-    const withLatLng = latLngs.find(x => x.address === address);
-    return Object.assign({}, address, withLatLng);
-  });
+  return Promise.all(Array.from(uniqueAddresses).map(throttledFetch));
 };
 
 module.exports = findLatLng;
