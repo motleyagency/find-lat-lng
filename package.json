@@ -1,7 +1,7 @@
 {
   "name": "find-lat-lng",
   "version": "1.0.0",
-  "description": "Find latitude and longitude for a list of addresses",
+  "description": "Find latitudes and longitudes for an array of addresses",
   "main": "index.js",
   "scripts": {
     "test": "jest",
