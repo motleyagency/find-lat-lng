@@ -17,8 +17,8 @@ $ yarn add find-lat-lng
 ```js
 import findLatLong from 'find-lat-lng';
 
-const client = findLatLng(GOOGLE_API_KEY);
 const GOOGLE_API_KEY = 'your_google_api_key'; // (https://developers.google.com/maps/documentation/javascript/get-api-key)
+const client = findLatLng(GOOGLE_API_KEY);
 const items = ["Lönnrotinkatu 5, Helsinki", "Lönnrotinkatu 4, Helsinki"];
 
 (async () => {
